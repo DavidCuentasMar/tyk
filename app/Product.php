@@ -21,4 +21,12 @@ class Product extends Model{
         $queryresponse = $query->paginate(8);
         return $queryresponse;
     }
+
+    static function searchProduct($searchWord) {    
+        $query = DB::table('public.product')
+                ->where('name','LIKE','%'.$searchWord.'%')
+                ->select( '*');
+        $queryresponse = $query->paginate(8);
+        return $queryresponse;
+    }
 }
