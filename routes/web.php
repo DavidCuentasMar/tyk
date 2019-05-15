@@ -19,3 +19,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/product/search', 'ProductController@search')->name('product.search');
+Route::post('/product/create', 'ProductController@create')->name('product.create');
+Route::post('/product/delete', 'ProductController@delete')->name('product.delete');
+Route::post('/product/buy', 'ProductController@buy')->name('product.buy');
+Route::get('/product/details/{product_id}', 'ProductController@details')->name('product.details');
+
+Route::get('/user/vendedores', 'HomeController@vendedores')->name('user.vendedores');
+Route::post('/user/products', 'HomeController@userProducts')->name('user.products');
+
+
