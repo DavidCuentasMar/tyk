@@ -28,11 +28,10 @@ class ProductController extends Controller{
 
     public function create(Request $request){
         $img_url='';
-
         if($request->productUrlImg==null){
             $img_url='https://cdn5.vectorstock.com/i/1000x1000/86/24/nutrition-healthy-food-icon-vector-12208624.jpg';
         }else{
-            $img_url=$request->$productUrlImg;
+            $img_url=$request->productUrlImg;
         }
         DB::table('product')->insert([
             'name' => $request->productName,
