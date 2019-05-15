@@ -18,8 +18,8 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function search()
-    {
+    public function search(Request $request){
+        dd($request->searchWord);
        return 'Test';
     }
 }

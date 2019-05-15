@@ -30,7 +30,7 @@
             <!-- Search form -->
             <form action="{{route('product.search')}}" method="post">
                 {{csrf_field()}}
-                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control" type="text" id="searchWord" name="searchWord" placeholder="Search" aria-label="Search">
                 <button type="submit" class="btn btn-primary">Buscar</button>
 
             </form>
