@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row" style ="margin-top:2%;">
         <div class="col-lg-9">
             <div class="row">
                 @foreach($productList as $product)
