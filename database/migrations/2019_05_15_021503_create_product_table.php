@@ -17,6 +17,8 @@ class CreateProductTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('owner_id');
+            $table->string('img_url',800)->nullable();
+            $table->string('description',800)->nullable();
             $table->integer('stock');
             $table->double('price');
             $table->timestamps();

@@ -17,8 +17,9 @@ class Product extends Model{
 
     static function getProducts() {    
         $query = DB::table('public.product')
+                ->where('stock','>',0)
                 ->select( '*');
-        $queryresponse = $query->paginate(8);
+        $queryresponse = $query->paginate(6);
         return $queryresponse;
     }
 
@@ -26,7 +27,7 @@ class Product extends Model{
         $query = DB::table('public.product')
                 ->where('name','LIKE','%'.$searchWord.'%')
                 ->select( '*');
-        $queryresponse = $query->paginate(8);
+        $queryresponse = $query->paginate(9);
         return $queryresponse;
     }
 }
